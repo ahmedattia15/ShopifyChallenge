@@ -10,14 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+
 class CollectionsViewController: UITableViewController {
     
     @IBOutlet var collectionsTableView: UITableView!
     //Constants
     let BASE_URL = "https://shopicruit.myshopify.com/admin/custom_collections.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
-    let PRODUCT_URL = "https://shopicruit.myshopify.com/admin/collects.json?"
-    var collections : [String] = [String]()
-    var collectionIDs 
+    var collections : [JSON] = [JSON]()
+    var ID = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class CollectionsViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "displayCell", for: indexPath) as! CustomDisplayCell
         
-        cell.nameOfCollection.text = collections[indexPath.row]
+        cell.nameOfCollection.text = collections[indexPath.row]["title"].stringValue
         
         return cell
     }
@@ -62,7 +62,16 @@ class CollectionsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        ID = collections[indexPath.row]["id"].stringValue
+        performSegue(withIdentifier: "goToProducts", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let secondVC = segue.destination as! ProductsTableViewController
+
+        secondVC.id = ID
+
     }
     
     
@@ -80,46 +89,15 @@ class CollectionsViewController: UITableViewController {
                 
                 print(shopifyJSON)
                 
-                let arr = shopifyJSON["custom_collections"].arrayValue
-                
-                //Creating an array
-                for number in (0...(arr.count-1)) {
-                    self.collections.append(arr[number]["title"].stringValue)
-                    print(self.collections[number])
-                }
+                self.collections = shopifyJSON["custom_collections"].arrayValue
                 
                 self.configureTableView()
                 self.collectionsTableView.reloadData()
-                
-                //let params : [String : String] = ["collection_id" : collectionID, "page" : "1", "access_token" : "c32313df0d0ef512ca64d5b336a0d7c6"]
-                
-//                self.getCollectionDetails(Params: params)
                 
             } else {
                 print("Error: \(response.result.error!)")
             }
         }
     }
-    
-//    func getCollectionDetails(Params : [String : String]) {
-//        Alamofire.request(PRODUCT_URL, method: .get, parameters: Params).responseJSON {
-//            response in
-//            if response.result.isSuccess {
-//                print("Got the Collection Details!")
-//
-//                let collectionJSON : JSON = JSON(response.result.value!)
-//
-//                print(collectionJSON)
-//            } else {
-//                print("Error: \(response.result.error!)")
-//            }
-//        }
-//    }
-    
-    func getProductDetails(Params : [String : String]) {
-        
-    }
-
-
 }
 

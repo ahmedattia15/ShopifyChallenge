@@ -15,6 +15,9 @@
 		B645EC8121F2CC3F0083008D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B645EC7F21F2CC3F0083008D /* LaunchScreen.storyboard */; };
 		B66FA25D21F42A1B00C0112E /* CustomDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FA25B21F42A1B00C0112E /* CustomDisplayCell.swift */; };
 		B66FA25E21F42A1B00C0112E /* DisplayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66FA25C21F42A1B00C0112E /* DisplayCell.xib */; };
+		B66FA26221F4D46600C0112E /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FA26121F4D46600C0112E /* ProductsTableViewController.swift */; };
+		B66FA26521F4DE0A00C0112E /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FA26321F4DE0A00C0112E /* ProductTableViewCell.swift */; };
+		B66FA26621F4DE0A00C0112E /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66FA26421F4DE0A00C0112E /* ProductTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		B645EC8221F2CC3F0083008D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B66FA25B21F42A1B00C0112E /* CustomDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDisplayCell.swift; sourceTree = "<group>"; };
 		B66FA25C21F42A1B00C0112E /* DisplayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayCell.xib; sourceTree = "<group>"; };
+		B66FA26121F4D46600C0112E /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		B66FA26321F4DE0A00C0112E /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		B66FA26421F4DE0A00C0112E /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		FDF8FEE353BABA08CEAFA88E /* Pods-ShopifyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopifyChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopifyChallenge/Pods-ShopifyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +100,9 @@
 		B66FA25521F4231200C0112E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B66FA25A21F429C900C0112E /* Custom Cell */,
 				B645EC7A21F2CC3F0083008D /* Main.storyboard */,
 				B645EC7F21F2CC3F0083008D /* LaunchScreen.storyboard */,
+				B66FA25A21F429C900C0112E /* Custom Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +112,7 @@
 			children = (
 				B645EC7621F2CC3F0083008D /* AppDelegate.swift */,
 				B645EC7821F2CC3F0083008D /* CollectionsViewController.swift */,
+				B66FA26121F4D46600C0112E /* ProductsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +129,8 @@
 			children = (
 				B66FA25B21F42A1B00C0112E /* CustomDisplayCell.swift */,
 				B66FA25C21F42A1B00C0112E /* DisplayCell.xib */,
+				B66FA26321F4DE0A00C0112E /* ProductTableViewCell.swift */,
+				B66FA26421F4DE0A00C0112E /* ProductTableViewCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -188,6 +197,7 @@
 			files = (
 				B645EC8121F2CC3F0083008D /* LaunchScreen.storyboard in Resources */,
 				B645EC7E21F2CC3F0083008D /* Assets.xcassets in Resources */,
+				B66FA26621F4DE0A00C0112E /* ProductTableViewCell.xib in Resources */,
 				B645EC7C21F2CC3F0083008D /* Main.storyboard in Resources */,
 				B66FA25E21F42A1B00C0112E /* DisplayCell.xib in Resources */,
 			);
@@ -250,6 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B645EC7921F2CC3F0083008D /* CollectionsViewController.swift in Sources */,
+				B66FA26221F4D46600C0112E /* ProductsTableViewController.swift in Sources */,
+				B66FA26521F4DE0A00C0112E /* ProductTableViewCell.swift in Sources */,
 				B645EC7721F2CC3F0083008D /* AppDelegate.swift in Sources */,
 				B66FA25D21F42A1B00C0112E /* CustomDisplayCell.swift in Sources */,
 			);

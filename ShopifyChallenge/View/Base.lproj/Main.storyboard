@@ -34,11 +34,43 @@
                     </tableView>
                     <connections>
                         <outlet property="collectionsTableView" destination="P3x-Ls-e7y" id="2F3-LE-FfY"/>
+                        <segue destination="dAb-ex-6IP" kind="show" identifier="goToProducts" id="Bm9-7V-tgh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXv-TI-lLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762" y="22"/>
+        </scene>
+        <!--Products Table View Controller-->
+        <scene sceneID="boS-yy-zmx">
+            <objects>
+                <tableViewController id="dAb-ex-6IP" customClass="ProductsTableViewController" customModule="ShopifyChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wOg-oK-l7U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7id-cL-OQy">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7id-cL-OQy" id="R02-vf-wGL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dAb-ex-6IP" id="qxg-Hl-4VX"/>
+                            <outlet property="delegate" destination="dAb-ex-6IP" id="TRH-x4-k0p"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="productsTableView" destination="wOg-oK-l7U" id="llT-i8-PZZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usd-0E-d5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="21"/>
         </scene>
     </scenes>
 </document>
