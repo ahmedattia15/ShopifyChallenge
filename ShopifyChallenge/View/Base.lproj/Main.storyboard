@@ -58,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="762" y="22"/>
         </scene>
-        <!--Collection Products-->
+        <!--Collection Details-->
         <scene sceneID="boS-yy-zmx">
             <objects>
                 <tableViewController id="dAb-ex-6IP" customClass="ProductsTableViewController" customModule="ShopifyChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,7 +81,7 @@
                             <outlet property="delegate" destination="dAb-ex-6IP" id="TRH-x4-k0p"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Collection Products" id="zCk-e5-eSN"/>
+                    <navigationItem key="navigationItem" title="Collection Details" id="zCk-e5-eSN"/>
                     <connections>
                         <outlet property="productsTableView" destination="wOg-oK-l7U" id="llT-i8-PZZ"/>
                     </connections>
