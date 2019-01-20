@@ -9,12 +9,13 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-
+import ChameleonFramework
 
 class CollectionsViewController: UITableViewController {
     
     @IBOutlet var collectionsTableView: UITableView!
-    //Constants
+    //Constants and Variables
+    let colourArray : [UIColor] = [UIColor.flatRed(), UIColor.flatBlue()]
     let BASE_URL = "https://shopicruit.myshopify.com/admin/custom_collections.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
     var collections : [JSON] = [JSON]()
     var ID = ""
@@ -46,6 +47,7 @@ class CollectionsViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "displayCell", for: indexPath) as! CustomDisplayCell
         
+        cell.backgroundColor = UIColor.flatWhite()
         cell.nameOfCollection.text = collections[indexPath.row]["title"].stringValue
         
         return cell

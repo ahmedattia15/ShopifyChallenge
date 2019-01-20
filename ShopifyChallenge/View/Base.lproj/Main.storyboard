@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-118" y="21"/>
         </scene>
-        <!--Collections View Controller-->
+        <!--Custom Collections-->
         <scene sceneID="jDV-S3-p6j">
             <objects>
                 <tableViewController id="zuo-VN-RDQ" customClass="CollectionsViewController" customModule="ShopifyChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="zuo-VN-RDQ" id="SoK-yp-AW4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nVU-Gy-zAu"/>
+                    <navigationItem key="navigationItem" title="Custom Collections" id="J1W-63-Nc5"/>
                     <connections>
                         <outlet property="collectionsTableView" destination="P3x-Ls-e7y" id="2F3-LE-FfY"/>
                         <segue destination="dAb-ex-6IP" kind="show" identifier="goToProducts" id="Bm9-7V-tgh"/>
@@ -58,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="762" y="22"/>
         </scene>
-        <!--Products Table View Controller-->
+        <!--Collection Products-->
         <scene sceneID="boS-yy-zmx">
             <objects>
                 <tableViewController id="dAb-ex-6IP" customClass="ProductsTableViewController" customModule="ShopifyChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,6 +81,7 @@
                             <outlet property="delegate" destination="dAb-ex-6IP" id="TRH-x4-k0p"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Collection Products" id="zCk-e5-eSN"/>
                     <connections>
                         <outlet property="productsTableView" destination="wOg-oK-l7U" id="llT-i8-PZZ"/>
                     </connections>
