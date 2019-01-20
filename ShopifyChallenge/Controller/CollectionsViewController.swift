@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class CollectionsViewController: UIViewController {
+class CollectionsViewController: UITableViewController {
     
+    @IBOutlet var collectionsTableView: UITableView!
     //Constants
     let BASE_URL = "https://shopicruit.myshopify.com/admin/custom_collections.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
     let PRODUCT_URL = "https://shopicruit.myshopify.com/admin/collects.json?"
@@ -19,11 +20,42 @@ class CollectionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //TODO: Register your MessageCell.xib file here:
+        collectionsTableView.register(UINib(nibName: "DisplayCell", bundle: nil), forCellReuseIdentifier: "displayCell")
+        
+        //configureTableView()
+        configureTableView()
         
         getCustomCollectionList()
 
     }
+    
+    
+    ///////////////////////////////////////////
+    
+    //MARK: - TableView DataSource Methods
+    
+    
+    
+    //TODO: Declare cellForRowAtIndexPath here:
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "displayCell", for: indexPath) as! CustomDisplayCell
+        
+        return cell
+    }
+    
+    //TODO: Declare numberOfRowsInSection here:
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func configureTableView() {
+        collectionsTableView.rowHeight = UITableView.automaticDimension
+        collectionsTableView.estimatedRowHeight = 120.0
+    }
+    
     
     //MARK: - Networking
     /**************************************************************/

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Collections View Controller-->
         <scene sceneID="jDV-S3-p6j">
             <objects>
-                <tableViewController id="zuo-VN-RDQ" sceneMemberID="viewController">
+                <tableViewController id="zuo-VN-RDQ" customClass="CollectionsViewController" customModule="ShopifyChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P3x-Ls-e7y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,10 +32,13 @@
                             <outlet property="delegate" destination="zuo-VN-RDQ" id="SoK-yp-AW4"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="collectionsTableView" destination="P3x-Ls-e7y" id="2F3-LE-FfY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXv-TI-lLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="27"/>
+            <point key="canvasLocation" x="762" y="22"/>
         </scene>
     </scenes>
 </document>

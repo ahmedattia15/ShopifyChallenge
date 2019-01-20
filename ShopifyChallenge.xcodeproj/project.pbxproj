@@ -13,6 +13,8 @@
 		B645EC7C21F2CC3F0083008D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B645EC7A21F2CC3F0083008D /* Main.storyboard */; };
 		B645EC7E21F2CC3F0083008D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B645EC7D21F2CC3F0083008D /* Assets.xcassets */; };
 		B645EC8121F2CC3F0083008D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B645EC7F21F2CC3F0083008D /* LaunchScreen.storyboard */; };
+		B66FA25D21F42A1B00C0112E /* CustomDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FA25B21F42A1B00C0112E /* CustomDisplayCell.swift */; };
+		B66FA25E21F42A1B00C0112E /* DisplayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66FA25C21F42A1B00C0112E /* DisplayCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		B645EC7D21F2CC3F0083008D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B645EC8021F2CC3F0083008D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B645EC8221F2CC3F0083008D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66FA25B21F42A1B00C0112E /* CustomDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDisplayCell.swift; sourceTree = "<group>"; };
+		B66FA25C21F42A1B00C0112E /* DisplayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayCell.xib; sourceTree = "<group>"; };
 		FDF8FEE353BABA08CEAFA88E /* Pods-ShopifyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopifyChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopifyChallenge/Pods-ShopifyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,7 @@
 		B66FA25521F4231200C0112E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B66FA25A21F429C900C0112E /* Custom Cell */,
 				B645EC7A21F2CC3F0083008D /* Main.storyboard */,
 				B645EC7F21F2CC3F0083008D /* LaunchScreen.storyboard */,
 			);
@@ -110,6 +115,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B66FA25A21F429C900C0112E /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B66FA25B21F42A1B00C0112E /* CustomDisplayCell.swift */,
+				B66FA25C21F42A1B00C0112E /* DisplayCell.xib */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +189,7 @@
 				B645EC8121F2CC3F0083008D /* LaunchScreen.storyboard in Resources */,
 				B645EC7E21F2CC3F0083008D /* Assets.xcassets in Resources */,
 				B645EC7C21F2CC3F0083008D /* Main.storyboard in Resources */,
+				B66FA25E21F42A1B00C0112E /* DisplayCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +253,7 @@
 			files = (
 				B645EC7921F2CC3F0083008D /* CollectionsViewController.swift in Sources */,
 				B645EC7721F2CC3F0083008D /* AppDelegate.swift in Sources */,
+				B66FA25D21F42A1B00C0112E /* CustomDisplayCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
