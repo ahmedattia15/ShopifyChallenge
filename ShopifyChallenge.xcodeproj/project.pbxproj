@@ -18,6 +18,7 @@
 		B66FA26221F4D46600C0112E /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FA26121F4D46600C0112E /* ProductsTableViewController.swift */; };
 		B66FA26521F4DE0A00C0112E /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FA26321F4DE0A00C0112E /* ProductTableViewCell.swift */; };
 		B66FA26621F4DE0A00C0112E /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66FA26421F4DE0A00C0112E /* ProductTableViewCell.xib */; };
+		B66FA26821F4F3BD00C0112E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FA26721F4F3BD00C0112E /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B66FA26121F4D46600C0112E /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		B66FA26321F4DE0A00C0112E /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		B66FA26421F4DE0A00C0112E /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		B66FA26721F4F3BD00C0112E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = "ShopifyChallenge/View/Custom Cell/Product.swift"; sourceTree = SOURCE_ROOT; };
 		FDF8FEE353BABA08CEAFA88E /* Pods-ShopifyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopifyChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopifyChallenge/Pods-ShopifyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 		B66FA25921F4234200C0112E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B66FA26721F4F3BD00C0112E /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				B66FA26521F4DE0A00C0112E /* ProductTableViewCell.swift in Sources */,
 				B645EC7721F2CC3F0083008D /* AppDelegate.swift in Sources */,
 				B66FA25D21F42A1B00C0112E /* CustomDisplayCell.swift in Sources */,
+				B66FA26821F4F3BD00C0112E /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

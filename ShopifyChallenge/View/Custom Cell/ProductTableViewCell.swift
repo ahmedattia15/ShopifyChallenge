@@ -11,6 +11,9 @@ import UIKit
 class ProductTableViewCell: UITableViewCell {
     
     @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var inventory: UILabel!
+    @IBOutlet weak var collectionTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

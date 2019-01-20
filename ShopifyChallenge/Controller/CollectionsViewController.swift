@@ -18,6 +18,7 @@ class CollectionsViewController: UITableViewController {
     let BASE_URL = "https://shopicruit.myshopify.com/admin/custom_collections.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
     var collections : [JSON] = [JSON]()
     var ID = ""
+    var collectionName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,20 +59,20 @@ class CollectionsViewController: UITableViewController {
     //TODO: configureTableView
     func configureTableView() {
         collectionsTableView.rowHeight = UITableView.automaticDimension
-        collectionsTableView.estimatedRowHeight = 120.0
+        collectionsTableView.estimatedRowHeight = 200.0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         ID = collections[indexPath.row]["id"].stringValue
+        collectionName = collections[indexPath.row]["title"].stringValue
         performSegue(withIdentifier: "goToProducts", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         let secondVC = segue.destination as! ProductsTableViewController
-
         secondVC.id = ID
-
+        secondVC.collectionName = collectionName
     }
     
     
